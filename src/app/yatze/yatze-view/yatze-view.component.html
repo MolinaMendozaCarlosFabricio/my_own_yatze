@@ -1,0 +1,25 @@
+<p>yatze-view works!</p>
+<main>
+
+    <button (click)="restard()">Reiniciar</button>
+
+    <h3>Ronda {{rounds}} </h3>
+
+    <button (click)="start()" *ngIf="rounds < 3">Comenzar</button>
+
+    <p>Primerp: {{dados[0]}} </p>
+    <button (click)="mantener_dado(0, dados[0])" *ngIf="dados_mantenidos[0] == 0">Mantener</button>
+    <p>Segundo: {{dados[1]}} </p>
+    <button (click)="mantener_dado(1, dados[1])" *ngIf="dados_mantenidos[1] == 0">Mantener</button>
+    <p>Tercero: {{dados[2]}} </p>
+    <button (click)="mantener_dado(2, dados[2])" *ngIf="dados_mantenidos[2] == 0">Mantener</button>
+    <p>Cuarto: {{dados[3]}} </p>
+    <button (click)="mantener_dado(3, dados[3])" *ngIf="dados_mantenidos[3] == 0">Mantener</button>
+    <p>Quinto: {{dados[4]}} </p>
+    <button (click)="mantener_dado(4, dados[4])" *ngIf="dados_mantenidos[4] == 0">Mantener</button>
+
+    <p>El resultado es... {{message}} </p>
+
+    <p>Objetivos menores cumplidos</p>
+    <p *ngFor="let objetivo_menor of objetivos_menores"> {{objetivo_menor}} </p>
+</main>
