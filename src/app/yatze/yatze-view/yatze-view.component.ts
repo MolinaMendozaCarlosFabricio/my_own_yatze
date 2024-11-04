@@ -18,8 +18,6 @@ export class YatzeViewComponent {
 
   restard(){
     this.rounds = 1;
-    this.message = ""
-    this.objetivos_menores = []
     this.dados_mantenidos = [0,0,0,0,0]
   }
 
@@ -88,17 +86,17 @@ export class YatzeViewComponent {
 
     for(let i: number = 0; i < this.dados.length; i++){
       if(coincidencias[i] == 2){
-        if(this.dados[i] == 1 && this.find_objetivo_menor("Unos"))
+        if(this.dados[i] == 1 && !this.find_objetivo_menor("Unos"))
           this.objetivos_menores.push("Unos")
-        if(this.dados[i] == 2 && this.find_objetivo_menor("Doses"))
+        if(this.dados[i] == 2 && !this.find_objetivo_menor("Doses"))
           this.objetivos_menores.push("Doses")
-        if(this.dados[i] == 3 && this.find_objetivo_menor("Treses"))
+        if(this.dados[i] == 3 && !this.find_objetivo_menor("Treses"))
           this.objetivos_menores.push("Treses")
-        if(this.dados[i] == 4 && this.find_objetivo_menor("Cuatros"))
+        if(this.dados[i] == 4 && !this.find_objetivo_menor("Cuatros"))
           this.objetivos_menores.push("Cuatros")
-        if(this.dados[i] == 5 && this.find_objetivo_menor("Cincos"))
+        if(this.dados[i] == 5 && !this.find_objetivo_menor("Cincos"))
           this.objetivos_menores.push("Cincos")
-        if(this.dados[i] == 6 && this.find_objetivo_menor("Seises"))
+        if(this.dados[i] == 6 && !this.find_objetivo_menor("Seises"))
           this.objetivos_menores.push("Seises")
       }
     }
